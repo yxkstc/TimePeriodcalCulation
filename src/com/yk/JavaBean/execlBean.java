@@ -9,6 +9,34 @@ public class execlBean {
     private String starttime;
     private String endtime;
     private String overtime;
+    private String system_shijiancha;
+    private String system_chaoshi;
+
+    public String getSystem_shijiancha() {
+        return system_shijiancha;
+    }
+
+    public void setSystem_shijiancha(String system_shijiancha) {
+        this.system_shijiancha = system_shijiancha;
+    }
+
+    public String getSystem_chaoshi() {
+        return system_chaoshi;
+    }
+
+    public void setSystem_chaoshi(String system_chaoshi) {
+        this.system_chaoshi = system_chaoshi;
+    }
+
+    public String getSystem_sfchaoshi() {
+        return system_sfchaoshi;
+    }
+
+    public void setSystem_sfchaoshi(String system_sfchaoshi) {
+        this.system_sfchaoshi = system_sfchaoshi;
+    }
+
+    private String system_sfchaoshi;
 
     public String getCompany() {
         return company;
@@ -84,7 +112,10 @@ public class execlBean {
                 ", auditnode='" + auditnode + '\'' +
                 ", starttime='" + starttime + '\'' +
                 ", endtime='" + endtime + '\'' +
-                ", Overtime='" + overtime + '\'' +
+                ", overtime='" + overtime + '\'' +
+                ", system_shijiancha='" + system_shijiancha + '\'' +
+                ", system_chaoshi='" + system_chaoshi + '\'' +
+                ", system_sfchaoshi='" + system_sfchaoshi + '\'' +
                 '}';
     }
 }

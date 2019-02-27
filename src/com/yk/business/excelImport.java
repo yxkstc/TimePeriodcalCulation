@@ -1,9 +1,11 @@
 package com.yk.business;
 
 import java.io.*;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import com.yk.JavaBean.execlBean;
@@ -11,6 +13,9 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 /**
  *
  * Title: excelTest
@@ -24,7 +29,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  * @author pancm
  */
 public class excelImport {
-    public static  List<execlBean> readExcel(String str) throws FileNotFoundException, IOException{
+    public static  List<execlBean> readExcel(String str) throws FileNotFoundException, IOException, ParseException {
         File file=new File(str);
         // HSSFWorkbook 2003的excel .xls,XSSFWorkbook导入2007的excel   .xlsx
         // HSSFWorkbook workbook=new HSSFWorkbook(new FileInputStream(new File(file)));
@@ -43,10 +48,41 @@ public class excelImport {
             eb.setProcessname(row.getCell(2).toString());
             eb.setProcesscoding(row.getCell(3).toString());
             eb.setAuditnode(row.getCell(4).toString());
-            //execl数字取值为float类型，截取.号之前的值
             eb.setStarttime(row.getCell(5).toString());
             eb.setEndtime(row.getCell(6).toString());
             eb.setOvertime(row.getCell(7).toString());
+            //5,6依次为开始，结束时间
+            if(row.getCell(5).toString().length()>0&&row.getCell(6).toString().length()>0){
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                Date kaishi=sdf.parse(row.getCell(5).toString());
+                Date jieshu=sdf.parse(row.getCell(6).toString());
+                eb.setSystem_shijiancha(String.valueOf(new BusinessLogic().getDatePoor(kaishi,jieshu)));
+                //获得相差时间
+                long time=Long.valueOf(eb.getSystem_shijiancha());
+                //计算超时时间，可能含假期
+                long chaoshi=new BusinessLogic().getisChaoshi(time);
+                if (chaoshi>0){
+                    //获取假日时间
+                    int jiari=new BusinessLogic().getVacationTime(kaishi,jieshu);
+                    long result=chaoshi-jiari;
+                    eb.setSystem_chaoshi(String.valueOf(result>0?result:0));
+                    if (result>0){
+                        eb.setSystem_sfchaoshi("已超时");
+                    }else {
+                        eb.setSystem_sfchaoshi("未超时");
+                    }
+                }else {
+                    //开始结束相差不超时2天的
+                    eb.setSystem_chaoshi("0");
+                    eb.setSystem_sfchaoshi("未超时");
+                }
+
+            }else {
+                //开始时间和结束时间任意一个字段为空的不计算是否超时
+                eb.setSystem_shijiancha("0");
+                eb.setSystem_chaoshi("0");
+                eb.setSystem_sfchaoshi("不在计算范围");
+            }
             list.add(eb);
         }
         workbook.close();
@@ -59,45 +95,51 @@ public class excelImport {
      * @throws FileNotFoundException
      * @throws IOException
      */
-   /* @SuppressWarnings({ "resource", "rawtypes", "unchecked" })
-    private static void writeExcel(String str) throws FileNotFoundException, IOException{
+    @SuppressWarnings({ "resource", "rawtypes", "unchecked" })
+    public  void writeExcel(String str,TableModel table) throws FileNotFoundException, IOException{
         File file=new File(str);
         // HSSFWorkbook 2003的excel .xls,XSSFWorkbook导入2007的excel   .xlsx
-//      HSSFWorkbook workbook=new HSSFWorkbook(new FileInputStream(new File(file)));
-        XSSFWorkbook workbook=new XSSFWorkbook(new FileInputStream(file));
-        List resultList =new ArrayList<>();
+        //HSSFWorkbook workbook=new HSSFWorkbook(new FileInputStream(new File(file)));
+        //XSSFWorkbook workbook=new XSSFWorkbook(new FileInputStream(file));
+        InputStream is = new FileInputStream(file);
+        HSSFWorkbook workbook=new HSSFWorkbook(is);
+        TableModel savetable =table;
 
         Sheet sheet1 = workbook.createSheet();//创建 sheet 对象
         Row row = sheet1.createRow(0);//第一行，标题
-        row.createCell(0).setCellValue("A");
-        row.createCell(1).setCellValue("B");
-        row.createCell(2).setCellValue("C");
-        row.createCell(3).setCellValue("D");
-        row.createCell(4).setCellValue("E");
-        //拼接数据
-        for(int i=1;i<=10;i++){
-            *//*JSONObject json1=new JSONObject();
-            json1.put("A", i);
-            json1.put("B", i*2);
-            json1.put("C", i*3);
-            json1.put("D", i*4);
-            json1.put("E", i*5);
-            resultList.add(json1);*//*
-        }
+        row.createCell(0).setCellValue("公司");
+        row.createCell(1).setCellValue("用户名");
+        row.createCell(2).setCellValue("流程名称");
+        row.createCell(3).setCellValue("流程编码");
+        row.createCell(4).setCellValue("审核节点");
+        row.createCell(5).setCellValue("开始时间");
+        row.createCell(6).setCellValue("结束时间");
+        row.createCell(7).setCellValue("超时时间(小时)");
+        row.createCell(8).setCellValue("时间差（系统）");
+        row.createCell(9).setCellValue("超时小时（系统）");
+        row.createCell(10).setCellValue("是否超时（系统）");
+
         Row row1;
-        for (int i = 1, len = resultList.size(); i <=len; i++) {//循环创建数据行
+        for (int i = 1;i <=savetable.getRowCount(); i++) {//循环创建数据行
             //因为第一行已经设置了，所以从第二行开始
-          *//*  row1 = sheet1.createRow(i);
-            JSONObject json=(JSONObject) resultList.get(i-1);
-            row1.createCell(0).setCellValue(json.getString("A"));
-            row1.createCell(1).setCellValue(json.getString("B"));
-            row1.createCell(2).setCellValue(json.getString("C"));
-            row1.createCell(3).setCellValue(json.getString("D"));
-            row1.createCell(4).setCellValue(json.getString("E"));*//*
+            row1 = sheet1.createRow(i);
+            row1.createCell(0).setCellValue(savetable.getValueAt(i,0).toString());
+            row1.createCell(1).setCellValue(savetable.getValueAt(i,1).toString());
+            row1.createCell(2).setCellValue(savetable.getValueAt(i,2).toString());
+            row1.createCell(3).setCellValue(savetable.getValueAt(i,3).toString());
+            row1.createCell(4).setCellValue(savetable.getValueAt(i,4).toString());
+            row1.createCell(5).setCellValue(savetable.getValueAt(i,5).toString());
+            row1.createCell(6).setCellValue(savetable.getValueAt(i,6).toString());
+            row1.createCell(7).setCellValue(savetable.getValueAt(i,7).toString());
+            row1.createCell(8).setCellValue(savetable.getValueAt(i,8).toString());
+            row1.createCell(9).setCellValue(savetable.getValueAt(i,9).toString());
+            row1.createCell(10).setCellValue(savetable.getValueAt(i,10).toString());
+
         }
-        *//*FileOutputStream fos = new FileOutputStream(path1);
+        FileOutputStream fos = new FileOutputStream("wenjian/流程超时表.xls");
         workbook.write(fos);//写文件
         fos.close();
-        System.out.println("写入成功！");*//*
-    }*/
+        workbook.close();
+        System.out.println("写入成功！");
+    }
 }
