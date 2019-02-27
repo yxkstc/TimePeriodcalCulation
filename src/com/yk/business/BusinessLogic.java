@@ -14,8 +14,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class BusinessLogic {
@@ -27,8 +25,8 @@ public class BusinessLogic {
     public static DefaultTableModel queryTableModel(List table) {
         Object[][] data=null;
         List<execlBean> list=table;
-        String head[]=new String[]{"公司","用户名","流程名称","流程编码","审核节点","开始时间","结束时间","超时小时(小时)"};
-        data=new Object[list.size()][9];
+        String head[]=new String[]{"公司","用户名","流程名称","流程编码","审核节点","开始时间","结束时间","超时小时(小时)","时间差（系统）","超时小时（系统）","是否超时（系统）"};
+        data=new Object[list.size()][11];
         for(int i=0;i<list.size();i++){
             data[i][0]=list.get(i).getCompany();
             data[i][1]=list.get(i).getUsername();
@@ -38,6 +36,9 @@ public class BusinessLogic {
             data[i][5]=list.get(i).getStarttime();
             data[i][6]=list.get(i).getEndtime();
             data[i][7]=list.get(i).getOvertime();
+            data[i][8]=list.get(i).getSystem_shijiancha();
+            data[i][9]=list.get(i).getSystem_chaoshi();
+            data[i][10]=list.get(i).getSystem_sfchaoshi();
         }
         DefaultTableModel tableModel=new DefaultTableModel(data,head);
         return tableModel;
@@ -128,7 +129,6 @@ public class BusinessLogic {
 
         return document;
     }
-
     /**
      * 解析xml Dom中的列
      *
@@ -148,7 +148,6 @@ public class BusinessLogic {
         }
         return list;
     }
-
     /**
      * 解析xml Dom中的行
      *
@@ -174,7 +173,6 @@ public class BusinessLogic {
         }
         return vector;
     }
-
     /**
      * 根据列定义的类型，对单元格中的数据进行类型转换
      *
@@ -212,7 +210,6 @@ public class BusinessLogic {
         //相差多少小时
         return diff/nh;
     }
-
     /**
      * 计算相差时间是否超过48小时，是，返回timecha-48，否，返回0
      *
@@ -240,10 +237,11 @@ public class BusinessLogic {
      * @param endDate
      * @return
      */
-    public int vacationTime(Date nowDate, Date endDate){
+    public int getVacationTime(Date nowDate, Date endDate){
         //获取系统日期，加工数据为格式XX月XX日
         int kaishi=DayNoftheyear(nowDate);
         int jieshu=DayNoftheyear(endDate);
+        //计算假日占用小时数
         int jiari=0;
         int rows=getModel("lib/jiaqibiao.xml").getRowCount();
         //遍历数据,判断当日是否假期

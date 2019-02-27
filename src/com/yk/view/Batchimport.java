@@ -8,6 +8,8 @@ import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
 import java.io.IOException;
+import java.text.ParseException;
+
 import com.yk.business.*;
 
 
@@ -22,7 +24,7 @@ public class Batchimport extends JFrame {
     /**
      * @UploadingfilesActionPerformed 上传事件
      */
-    private void UploadingfilesActionPerformed(ActionEvent e) throws IOException {
+    private void UploadingfilesActionPerformed(ActionEvent e) throws IOException, ParseException {
         // TODO add your code here
         initUploadingfiles();
         if(textField1.getText().length()>0){
@@ -34,11 +36,12 @@ public class Batchimport extends JFrame {
     /**
      * @SaveActionPerformed 保存事件
      */
-    private void SaveActionPerformed(ActionEvent e) {
+    private void SaveActionPerformed(ActionEvent e) throws IOException {
         // TODO add your code here
 
             if (filesTable.getRowCount()>0){
                 new BusinessLogic().saveModel(filesTable.getModel(),"lib/database.xml");
+                new excelImport().writeExcel("wenjian/流程超时表.xls",filesTable.getModel());
                 JOptionPane.showMessageDialog(null, "保存成功");
             }else {
                 JOptionPane.showMessageDialog(null, "保存失败", "失败", JOptionPane.ERROR_MESSAGE);
@@ -69,6 +72,8 @@ public class Batchimport extends JFrame {
                 UploadingfilesActionPerformed(e);
             } catch (IOException e1) {
                 e1.printStackTrace();
+            } catch (ParseException e1) {
+                e1.printStackTrace( );
             }
         });
         contentPane.add(Uploadingfiles, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
@@ -82,7 +87,13 @@ public class Batchimport extends JFrame {
 
         Save.setText("\u786e\u8ba4\u4e0b\u8868\u6570\u636e\u65e0\u8bef\u540e\u6279\u91cf\u5199\u5165\u6570\u636e\u5e93"); //NON-NLS
         Save.setFont(new Font("\u5fae\u8f6f\u96c5\u9ed1", Font.PLAIN, 20)); //NON-NLS
-        Save.addActionListener(e -> SaveActionPerformed(e));
+        Save.addActionListener(e -> {
+            try {
+                SaveActionPerformed(e);
+            } catch (IOException e1) {
+                e1.printStackTrace( );
+            }
+        });
         contentPane.add(Save, new GridBagConstraints(0, 1, 2, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 5, 0), 0, 0));
