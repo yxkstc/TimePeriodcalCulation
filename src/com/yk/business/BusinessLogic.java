@@ -14,6 +14,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class BusinessLogic {
@@ -231,6 +233,28 @@ public class BusinessLogic {
         return gc.get(Calendar.DAY_OF_YEAR);
     }
     /**
+     * 计算是日期是本年第几月
+     *
+     * @param time
+     * @return
+     */
+    public int monthNoftheyear(Date time){
+        GregorianCalendar gc = new GregorianCalendar();
+        gc.setTime(time);
+        return gc.get(Calendar.MONTH)+1;
+    }
+    /**
+     * 获取当前系统时间year,moth,day
+     *
+     * @param time
+     * @return
+     */
+    public String getSystemriqi(Date time){
+        DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+
+        return dateFormat.format(time);
+    }
+    /**
      * 计算是假期为多少小时
      *
      * @param nowDate
@@ -238,7 +262,7 @@ public class BusinessLogic {
      * @return
      */
     public int getVacationTime(Date nowDate, Date endDate){
-        //获取系统日期，加工数据为格式XX月XX日
+        //获取系统日期，开始，结算时间是对应当前第N天
         int kaishi=DayNoftheyear(nowDate);
         int jieshu=DayNoftheyear(endDate);
         //计算假日占用小时数

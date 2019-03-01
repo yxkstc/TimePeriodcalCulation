@@ -1,10 +1,7 @@
 package com.yk.view;
 
-import com.yk.business.BusinessLogic;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Mail {
     public static void main(String[] args) throws ParseException {

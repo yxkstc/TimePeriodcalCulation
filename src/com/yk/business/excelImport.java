@@ -4,7 +4,6 @@ import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -12,8 +11,6 @@ import com.yk.JavaBean.execlBean;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 /**
@@ -40,7 +37,7 @@ public class excelImport {
         Row row=null;
         int rowCount=sheet.getPhysicalNumberOfRows();
         //逐行处理 excel 数据
-        for (int i = 2; i <rowCount; i++) {
+        for (int i = 1; i <rowCount; i++) {
             row=sheet.getRow(i);
             execlBean eb=new execlBean();
             eb.setCompany(row.getCell(0).toString());
@@ -50,7 +47,7 @@ public class excelImport {
             eb.setAuditnode(row.getCell(4).toString());
             eb.setStarttime(row.getCell(5).toString());
             eb.setEndtime(row.getCell(6).toString());
-            eb.setOvertime(row.getCell(7).toString());
+            eb.setOvertime(row.getCell(7).toString().substring(0,row.getCell(7).toString().indexOf(".")));
             //5,6依次为开始，结束时间
             if(row.getCell(5).toString().length()>0&&row.getCell(6).toString().length()>0){
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -97,32 +94,54 @@ public class excelImport {
      */
     @SuppressWarnings({ "resource", "rawtypes", "unchecked" })
     public  void writeExcel(String str,TableModel table) throws FileNotFoundException, IOException{
-        File file=new File(str);
         // HSSFWorkbook 2003的excel .xls,XSSFWorkbook导入2007的excel   .xlsx
         //HSSFWorkbook workbook=new HSSFWorkbook(new FileInputStream(new File(file)));
         //XSSFWorkbook workbook=new XSSFWorkbook(new FileInputStream(file));
-        InputStream is = new FileInputStream(file);
-        HSSFWorkbook workbook=new HSSFWorkbook(is);
-        TableModel savetable =table;
+        //InputStream is = new FileInputStream(file);
+        HSSFWorkbook workbook=new HSSFWorkbook();//定义输出方式为xls2003
+        TableModel savetable =table;//输出数据源（流程超时表）
+        TableModel savetable1 =new BusinessLogic().getModel("lib/jiaqibiao.xml");//输出数据源（假期表）
+        Sheet sheet1 = workbook.createSheet("晏堃统计("+new BusinessLogic().monthNoftheyear(new Date())+"月)");//创建 sheet1 对象
+        Sheet sheet2 = workbook.createSheet("流程超时统计表（原表）");//创建 sheet2 对象
+        Sheet sheet3 = workbook.createSheet("假日表");//创建 sheet3 对象
+        Row row = sheet1.createRow(0);//创建sheet1第一行标题对象
+        Row row1;//创建sheet1表行对象
+        Row row2 = sheet2.createRow(0);//创建sheet2第一行标题对象
+        Row row3;//创建sheet2表行对象
+        Row row4 = sheet3.createRow(0);//创建sheet3第一行标题对象
+        Row row5;//创建sheet3表行对象
+        //shee1标题赋值
+        row.createCell(0).setCellValue(savetable.getColumnName(0));
+        row.createCell(1).setCellValue(savetable.getColumnName(1));
+        row.createCell(2).setCellValue(savetable.getColumnName(2));
+        row.createCell(3).setCellValue(savetable.getColumnName(3));
+        row.createCell(4).setCellValue(savetable.getColumnName(4));
+        row.createCell(5).setCellValue(savetable.getColumnName(5));
+        row.createCell(6).setCellValue(savetable.getColumnName(6));
+        row.createCell(7).setCellValue(savetable.getColumnName(7));
+        row.createCell(8).setCellValue(savetable.getColumnName(8));
+        row.createCell(9).setCellValue(savetable.getColumnName(9));
+        row.createCell(10).setCellValue(savetable.getColumnName(10));
+        //sheet2标题赋值
+        row2.createCell(0).setCellValue(savetable.getColumnName(0));
+        row2.createCell(1).setCellValue(savetable.getColumnName(1));
+        row2.createCell(2).setCellValue(savetable.getColumnName(2));
+        row2.createCell(3).setCellValue(savetable.getColumnName(3));
+        row2.createCell(4).setCellValue(savetable.getColumnName(4));
+        row2.createCell(5).setCellValue(savetable.getColumnName(5));
+        row2.createCell(6).setCellValue(savetable.getColumnName(6));
+        row2.createCell(7).setCellValue(savetable.getColumnName(7));
+        //sheet3标题赋值
+        row4.createCell(0).setCellValue(savetable1.getColumnName(0));
+        row4.createCell(1).setCellValue(savetable1.getColumnName(1));
 
-        Sheet sheet1 = workbook.createSheet();//创建 sheet 对象
-        Row row = sheet1.createRow(0);//第一行，标题
-        row.createCell(0).setCellValue("公司");
-        row.createCell(1).setCellValue("用户名");
-        row.createCell(2).setCellValue("流程名称");
-        row.createCell(3).setCellValue("流程编码");
-        row.createCell(4).setCellValue("审核节点");
-        row.createCell(5).setCellValue("开始时间");
-        row.createCell(6).setCellValue("结束时间");
-        row.createCell(7).setCellValue("超时时间(小时)");
-        row.createCell(8).setCellValue("时间差（系统）");
-        row.createCell(9).setCellValue("超时小时（系统）");
-        row.createCell(10).setCellValue("是否超时（系统）");
-
-        Row row1;
-        for (int i = 1;i <=savetable.getRowCount(); i++) {//循环创建数据行
-            //因为第一行已经设置了，所以从第二行开始
+        //数据源（流程超时表）遍历
+        for (int i = 1;i <savetable.getRowCount(); i++) {
+            //因为sheet1第一行已经设置了，所以从第二行开始
             row1 = sheet1.createRow(i);
+            //因为sheet2第一行已经设置了，所以从第二行开始
+            row3 = sheet2.createRow(i);
+            //写入sheet1行数据
             row1.createCell(0).setCellValue(savetable.getValueAt(i,0).toString());
             row1.createCell(1).setCellValue(savetable.getValueAt(i,1).toString());
             row1.createCell(2).setCellValue(savetable.getValueAt(i,2).toString());
@@ -134,12 +153,27 @@ public class excelImport {
             row1.createCell(8).setCellValue(savetable.getValueAt(i,8).toString());
             row1.createCell(9).setCellValue(savetable.getValueAt(i,9).toString());
             row1.createCell(10).setCellValue(savetable.getValueAt(i,10).toString());
+            //写入sheet2行数据
+            row3.createCell(0).setCellValue(savetable.getValueAt(i,0).toString());
+            row3.createCell(1).setCellValue(savetable.getValueAt(i,1).toString());
+            row3.createCell(2).setCellValue(savetable.getValueAt(i,2).toString());
+            row3.createCell(3).setCellValue(savetable.getValueAt(i,3).toString());
+            row3.createCell(4).setCellValue(savetable.getValueAt(i,4).toString());
+            row3.createCell(5).setCellValue(savetable.getValueAt(i,5).toString());
+            row3.createCell(6).setCellValue(savetable.getValueAt(i,6).toString());
+            row3.createCell(7).setCellValue(savetable.getValueAt(i,7).toString());
+        }
+        //数据源（假期表）遍历
+        for (int i = 1;i <savetable1.getRowCount(); i++) {
+            //因为sheet3第一行已经设置了，所以从第二行开始
+            row5 = sheet3.createRow(i);
+            //写入sheet3行数据
+            row5.createCell(0).setCellValue(savetable1.getValueAt(i,0).toString());
+            row5.createCell(1).setCellValue(savetable1.getValueAt(i,1).toString());
 
         }
-        FileOutputStream fos = new FileOutputStream("wenjian/流程超时表.xls");
+        FileOutputStream fos = new FileOutputStream(str);
         workbook.write(fos);//写文件
         fos.close();
-        workbook.close();
-        System.out.println("写入成功！");
     }
 }
