@@ -4,15 +4,7 @@
     <list default="true" id="4184efab-93d5-4bec-955e-e8a8bc7eaa1e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/lib/database.xml" afterPath="$PROJECT_DIR$/lib/database.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/business/BusinessLogic.class" afterPath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/business/BusinessLogic.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/business/excelImport.class" afterPath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/business/excelImport.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/view/Batchimport.class" afterPath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/view/Batchimport.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/view/Mail.class" afterPath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/view/Mail.class" />
-      <change beforePath="$PROJECT_DIR$/src/com/yk/business/BusinessLogic.java" afterPath="$PROJECT_DIR$/src/com/yk/business/BusinessLogic.java" />
       <change beforePath="$PROJECT_DIR$/src/com/yk/business/excelImport.java" afterPath="$PROJECT_DIR$/src/com/yk/business/excelImport.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/yk/view/Batchimport.java" afterPath="$PROJECT_DIR$/src/com/yk/view/Batchimport.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/yk/view/Mail.java" afterPath="$PROJECT_DIR$/src/com/yk/view/Mail.java" />
-      <change beforePath="$PROJECT_DIR$/wenjian/流程审批超时统计表20190225.xls" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,22 +19,21 @@
       <file leaf-file-name="Mail.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yk/view/Mail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
+            <state relative-caret-position="150">
               <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="excelImport.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="excelImport.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yk/business/excelImport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="39" column="22" lean-forward="false" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state relative-caret-position="24">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#excelImport#0" expanded="false" />
                 <element signature="docComment;method#writeExcel#0;class#excelImport#0" expanded="false" />
-                <element signature="e#3540#3598#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,7 +42,7 @@
       <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
         <entry file="jar://D:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="56850">
               <caret line="1966" column="0" lean-forward="false" selection-start-line="1966" selection-start-column="0" selection-end-line="1966" selection-end-column="0" />
               <folding />
             </state>
@@ -61,8 +52,8 @@
       <file leaf-file-name="database.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/database.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="35" />
+            <state relative-caret-position="3660">
+              <caret line="122" column="35" lean-forward="false" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -71,14 +62,14 @@
       <file leaf-file-name="jiaqibiao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/jiaqibiao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="6750">
               <caret line="225" column="13" lean-forward="false" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Batchimport.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Batchimport.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yk/view/Batchimport.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -110,6 +101,9 @@
       <find>queryTableModel</find>
       <find>new Configure().</find>
       <find>setCellValue</find>
+      <find>row1</find>
+      <find>row3</find>
+      <find>row5</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,8 +131,8 @@
         <option value="$PROJECT_DIR$/lib/jiaqibiao.xml" />
         <option value="$PROJECT_DIR$/src/com/yk/business/BusinessLogic.java" />
         <option value="$PROJECT_DIR$/src/com/yk/view/Mail.java" />
-        <option value="$PROJECT_DIR$/src/com/yk/business/excelImport.java" />
         <option value="$PROJECT_DIR$/src/com/yk/view/Batchimport.java" />
+        <option value="$PROJECT_DIR$/src/com/yk/business/excelImport.java" />
       </list>
     </option>
   </component>
@@ -149,8 +143,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="116" />
-    <option name="y" value="22" />
+    <option name="x" value="227" />
     <option name="width" value="1380" />
     <option name="height" value="920" />
   </component>
@@ -192,8 +185,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,6 +242,11 @@
             </path>
             <path>
               <item name="TimePeriodcalCulation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TimePeriodcalCulation" type="462c0819:PsiDirectoryNode" />
+              <item name="wenjian" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TimePeriodcalCulation" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -282,7 +279,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,6 +290,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -448,12 +447,21 @@
       <workItem from="1551255917164" duration="3494000" />
       <workItem from="1551275208432" duration="4938000" />
       <workItem from="1551318222969" duration="6836000" />
-      <workItem from="1551402170677" duration="1748000" />
+      <workItem from="1551402170677" duration="2014000" />
+      <workItem from="1552618917158" duration="1355000" />
     </task>
+    <task id="LOCAL-00001" summary="公司电脑优化代码20190301">
+      <created>1551404083900</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551404083901</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39784000" />
+    <option name="totallyTimeSpent" value="41405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -466,12 +474,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32746956" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34641406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -494,6 +502,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="公司电脑优化代码20190301" />
+    <option name="LAST_COMMIT_MESSAGE" value="公司电脑优化代码20190301" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,7 +636,6 @@
           <folding>
             <element signature="docComment;class#excelImport#0" expanded="false" />
             <element signature="docComment;method#writeExcel#0;class#excelImport#0" expanded="false" />
-            <element signature="e#3540#3598#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -675,7 +686,6 @@
           <folding>
             <element signature="docComment;class#excelImport#0" expanded="false" />
             <element signature="docComment;method#writeExcel#0;class#excelImport#0" expanded="false" />
-            <element signature="e#3540#3598#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -833,7 +843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/jiaqibiao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="6750">
           <caret line="225" column="13" lean-forward="false" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="13" />
           <folding />
         </state>
@@ -841,7 +851,7 @@
     </entry>
     <entry file="jar://D:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="56850">
           <caret line="1966" column="0" lean-forward="false" selection-start-line="1966" selection-start-column="0" selection-end-line="1966" selection-end-column="0" />
           <folding />
         </state>
@@ -849,28 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/database.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yk/business/excelImport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="22" lean-forward="false" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-          <folding>
-            <element signature="docComment;class#excelImport#0" expanded="false" />
-            <element signature="docComment;method#writeExcel#0;class#excelImport#0" expanded="false" />
-            <element signature="e#3540#3598#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yk/view/Mail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="3660">
+          <caret line="122" column="35" lean-forward="false" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -884,6 +874,25 @@
             <element signature="docComment;method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
             <element signature="docComment;method#SaveActionPerformed#0;class#Batchimport#0" expanded="false" />
             <element signature="docComment;method#initUploadingfiles#0;class#Batchimport#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yk/view/Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yk/business/excelImport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#excelImport#0" expanded="false" />
+            <element signature="docComment;method#writeExcel#0;class#excelImport#0" expanded="false" />
           </folding>
         </state>
       </provider>

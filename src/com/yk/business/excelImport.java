@@ -47,7 +47,7 @@ public class excelImport {
             eb.setAuditnode(row.getCell(4).toString());
             eb.setStarttime(row.getCell(5).toString());
             eb.setEndtime(row.getCell(6).toString());
-            eb.setOvertime(row.getCell(7).toString().substring(0,row.getCell(7).toString().indexOf(".")));
+            eb.setOvertime(row.getCell(7).toString( ));
             //5,6依次为开始，结束时间
             if(row.getCell(5).toString().length()>0&&row.getCell(6).toString().length()>0){
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -105,11 +105,8 @@ public class excelImport {
         Sheet sheet2 = workbook.createSheet("流程超时统计表（原表）");//创建 sheet2 对象
         Sheet sheet3 = workbook.createSheet("假日表");//创建 sheet3 对象
         Row row = sheet1.createRow(0);//创建sheet1第一行标题对象
-        Row row1;//创建sheet1表行对象
         Row row2 = sheet2.createRow(0);//创建sheet2第一行标题对象
-        Row row3;//创建sheet2表行对象
         Row row4 = sheet3.createRow(0);//创建sheet3第一行标题对象
-        Row row5;//创建sheet3表行对象
         //shee1标题赋值
         row.createCell(0).setCellValue(savetable.getColumnName(0));
         row.createCell(1).setCellValue(savetable.getColumnName(1));
@@ -136,40 +133,40 @@ public class excelImport {
         row4.createCell(1).setCellValue(savetable1.getColumnName(1));
 
         //数据源（流程超时表）遍历
-        for (int i = 1;i <savetable.getRowCount(); i++) {
+        for (int i = 0; i < savetable.getRowCount( ); i++) {
             //因为sheet1第一行已经设置了，所以从第二行开始
-            row1 = sheet1.createRow(i);
+            row = sheet1.createRow(i + 1);
             //因为sheet2第一行已经设置了，所以从第二行开始
-            row3 = sheet2.createRow(i);
+            row2 = sheet2.createRow(i + 1);
             //写入sheet1行数据
-            row1.createCell(0).setCellValue(savetable.getValueAt(i,0).toString());
-            row1.createCell(1).setCellValue(savetable.getValueAt(i,1).toString());
-            row1.createCell(2).setCellValue(savetable.getValueAt(i,2).toString());
-            row1.createCell(3).setCellValue(savetable.getValueAt(i,3).toString());
-            row1.createCell(4).setCellValue(savetable.getValueAt(i,4).toString());
-            row1.createCell(5).setCellValue(savetable.getValueAt(i,5).toString());
-            row1.createCell(6).setCellValue(savetable.getValueAt(i,6).toString());
-            row1.createCell(7).setCellValue(savetable.getValueAt(i,7).toString());
-            row1.createCell(8).setCellValue(savetable.getValueAt(i,8).toString());
-            row1.createCell(9).setCellValue(savetable.getValueAt(i,9).toString());
-            row1.createCell(10).setCellValue(savetable.getValueAt(i,10).toString());
+            row.createCell(0).setCellValue(savetable.getValueAt(i, 0).toString( ));
+            row.createCell(1).setCellValue(savetable.getValueAt(i, 1).toString( ));
+            row.createCell(2).setCellValue(savetable.getValueAt(i, 2).toString( ));
+            row.createCell(3).setCellValue(savetable.getValueAt(i, 3).toString( ));
+            row.createCell(4).setCellValue(savetable.getValueAt(i, 4).toString( ));
+            row.createCell(5).setCellValue(savetable.getValueAt(i, 5).toString( ));
+            row.createCell(6).setCellValue(savetable.getValueAt(i, 6).toString( ));
+            row.createCell(7).setCellValue(savetable.getValueAt(i, 7).toString( ));
+            row.createCell(8).setCellValue(savetable.getValueAt(i, 8).toString( ));
+            row.createCell(9).setCellValue(savetable.getValueAt(i, 9).toString( ));
+            row.createCell(10).setCellValue(savetable.getValueAt(i, 10).toString( ));
             //写入sheet2行数据
-            row3.createCell(0).setCellValue(savetable.getValueAt(i,0).toString());
-            row3.createCell(1).setCellValue(savetable.getValueAt(i,1).toString());
-            row3.createCell(2).setCellValue(savetable.getValueAt(i,2).toString());
-            row3.createCell(3).setCellValue(savetable.getValueAt(i,3).toString());
-            row3.createCell(4).setCellValue(savetable.getValueAt(i,4).toString());
-            row3.createCell(5).setCellValue(savetable.getValueAt(i,5).toString());
-            row3.createCell(6).setCellValue(savetable.getValueAt(i,6).toString());
-            row3.createCell(7).setCellValue(savetable.getValueAt(i,7).toString());
+            row2.createCell(0).setCellValue(savetable.getValueAt(i, 0).toString( ));
+            row2.createCell(1).setCellValue(savetable.getValueAt(i, 1).toString( ));
+            row2.createCell(2).setCellValue(savetable.getValueAt(i, 2).toString( ));
+            row2.createCell(3).setCellValue(savetable.getValueAt(i, 3).toString( ));
+            row2.createCell(4).setCellValue(savetable.getValueAt(i, 4).toString( ));
+            row2.createCell(5).setCellValue(savetable.getValueAt(i, 5).toString( ));
+            row2.createCell(6).setCellValue(savetable.getValueAt(i, 6).toString( ));
+            row2.createCell(7).setCellValue(savetable.getValueAt(i, 7).toString( ));
         }
         //数据源（假期表）遍历
-        for (int i = 1;i <savetable1.getRowCount(); i++) {
+        for (int i = 0; i < savetable1.getRowCount( ); i++) {
             //因为sheet3第一行已经设置了，所以从第二行开始
-            row5 = sheet3.createRow(i);
+            row4 = sheet3.createRow(i);
             //写入sheet3行数据
-            row5.createCell(0).setCellValue(savetable1.getValueAt(i,0).toString());
-            row5.createCell(1).setCellValue(savetable1.getValueAt(i,1).toString());
+            row4.createCell(0).setCellValue(savetable1.getValueAt(i, 0).toString( ));
+            row4.createCell(1).setCellValue(savetable1.getValueAt(i, 1).toString( ));
 
         }
         FileOutputStream fos = new FileOutputStream(str);
