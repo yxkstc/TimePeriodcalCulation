@@ -9,6 +9,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.Date;
 
 import com.yk.business.*;
 
@@ -39,14 +40,14 @@ public class Batchimport extends JFrame {
     private void SaveActionPerformed(ActionEvent e) throws IOException {
         // TODO add your code here
 
-            if (filesTable.getRowCount()>0){
-                new BusinessLogic().saveModel(filesTable.getModel(),"lib/database.xml");
-                new excelImport().writeExcel("wenjian/流程超时表.xls",filesTable.getModel());
-                JOptionPane.showMessageDialog(null, "保存成功");
-            }else {
-                JOptionPane.showMessageDialog(null, "保存失败", "失败", JOptionPane.ERROR_MESSAGE);
+        if (filesTable.getRowCount()>0){
+            new BusinessLogic().saveModel(filesTable.getModel(),"lib/database.xml");
+            new excelImport().writeExcel("wenjian/流程超时表"+new BusinessLogic().getSystemriqi(new Date())+".xls",filesTable.getModel());
+            JOptionPane.showMessageDialog(null, "保存成功");
+        }else {
+            JOptionPane.showMessageDialog(null, "保存失败", "失败", JOptionPane.ERROR_MESSAGE);
 
-            }
+        }
     }
 
     public void initComponents() {
@@ -102,7 +103,7 @@ public class Batchimport extends JFrame {
         contentPane.add(scrollPane1, new GridBagConstraints(0, 2, 2, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 0, 0), 0, 0));
-        
+
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
         contentPane.setName("EXECL批量导入");
         pack();
