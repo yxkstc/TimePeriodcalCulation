@@ -47,7 +47,9 @@ public class excelImport {
             eb.setAuditnode(row.getCell(4).toString());
             eb.setStarttime(row.getCell(5).toString());
             eb.setEndtime(row.getCell(6).toString());
-            eb.setOvertime(row.getCell(7).toString( ));
+            String overtime=row.getCell(7).toString( ).length()==0?"0":row.getCell(7).toString();
+            String subOvertime=overtime.substring(0,overtime.indexOf("."));
+            eb.setOvertime(subOvertime);
             //5,6依次为开始，结束时间
             if(row.getCell(5).toString().length()>0&&row.getCell(6).toString().length()>0){
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
