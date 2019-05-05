@@ -42,7 +42,7 @@ public class Batchimport extends JFrame {
 
         if (filesTable.getRowCount()>0){
             new BusinessLogic().saveModel(filesTable.getModel(),"lib/database.xml");
-            new excelImport().writeExcel("wenjian/流程超时表"+new BusinessLogic().getSystemriqi(new Date())+".xls",filesTable.getModel());
+            new excelImport().writeExcel("wenjian/流程审批超时统计表"+new BusinessLogic().getSystemriqi(new Date())+".xls",filesTable.getModel());
             JOptionPane.showMessageDialog(null, "保存成功");
         }else {
             JOptionPane.showMessageDialog(null, "保存失败", "失败", JOptionPane.ERROR_MESSAGE);

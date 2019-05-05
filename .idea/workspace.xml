@@ -4,11 +4,8 @@
     <list default="true" id="4184efab-93d5-4bec-955e-e8a8bc7eaa1e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/lib/database.xml" afterPath="$PROJECT_DIR$/lib/database.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/JavaBean/execlBean.class" afterPath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/JavaBean/execlBean.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/business/BusinessLogic.class" afterPath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/business/BusinessLogic.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/business/excelImport.class" afterPath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/business/excelImport.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/view/Batchimport.class" afterPath="$PROJECT_DIR$/out/production/TimePeriodcalCulation/com/yk/view/Batchimport.class" />
-      <change beforePath="$PROJECT_DIR$/src/com/yk/business/excelImport.java" afterPath="$PROJECT_DIR$/src/com/yk/business/excelImport.java" />
+      <change beforePath="$PROJECT_DIR$/lib/jiaqibiao.xml" afterPath="$PROJECT_DIR$/lib/jiaqibiao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/com/yk/view/Batchimport.java" afterPath="$PROJECT_DIR$/src/com/yk/view/Batchimport.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,54 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Batchimport.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yk/view/Batchimport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="39" column="71" lean-forward="false" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
-              <folding>
-                <element signature="method#Batchimport#0;class#Batchimport#0" expanded="false" />
-                <element signature="docComment;method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
-                <element signature="method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
-                <element signature="method#SaveActionPerformed#0;class#Batchimport#0" expanded="false" />
-                <element signature="docComment;method#initUploadingfiles#0;class#Batchimport#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="excelImport.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/yk/business/excelImport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BusinessLogic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yk/business/BusinessLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6150">
-              <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4411#4419#0" expanded="true" />
-                <element signature="method#getRows#0;class#BusinessLogic#0" expanded="false" />
-                <element signature="e#5030#5040#0" expanded="true" />
-                <element signature="e#5284#5292#0" expanded="true" />
-                <element signature="e#6747#6748#0" expanded="true" />
-                <element signature="e#6793#6794#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -101,12 +51,12 @@
         <option value="$PROJECT_DIR$/src/com/yk/business/Column.java" />
         <option value="$PROJECT_DIR$/src/com/yk/JavaBean/Column.java" />
         <option value="$PROJECT_DIR$/lib/jiaribiao.fxml" />
-        <option value="$PROJECT_DIR$/lib/jiaqibiao.xml" />
         <option value="$PROJECT_DIR$/src/com/yk/view/Mail.java" />
-        <option value="$PROJECT_DIR$/src/com/yk/view/Batchimport.java" />
         <option value="$PROJECT_DIR$/src/com/yk/business/BusinessLogic.java" />
         <option value="$PROJECT_DIR$/src/com/yk/JavaBean/execlBean.java" />
         <option value="$PROJECT_DIR$/src/com/yk/business/excelImport.java" />
+        <option value="$PROJECT_DIR$/lib/jiaqibiao.xml" />
+        <option value="$PROJECT_DIR$/src/com/yk/view/Batchimport.java" />
       </list>
     </option>
   </component>
@@ -159,9 +109,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,16 +161,11 @@
               <item name="yk" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TimePeriodcalCulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TimePeriodcalCulation" type="462c0819:PsiDirectoryNode" />
-              <item name="wenjian" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -389,7 +334,9 @@
       <workItem from="1552630032104" duration="115000" />
       <workItem from="1552630261394" duration="921000" />
       <workItem from="1552632582028" duration="29000" />
-      <workItem from="1554090554825" duration="2212000" />
+      <workItem from="1554090554825" duration="2856000" />
+      <workItem from="1554101861452" duration="38000" />
+      <workItem from="1557018569989" duration="1791000" />
     </task>
     <task id="LOCAL-00001" summary="最终版2019.3.15 15:00">
       <created>1552631172859</created>
@@ -398,11 +345,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552631172859</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改2019.4.1 15:00">
+      <created>1554095821470</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554095821470</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34519000" />
+    <option name="totallyTimeSpent" value="36992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -420,7 +374,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21529563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22043702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -446,7 +400,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="最终版2019.3.15 15:00" />
-    <option name="LAST_COMMIT_MESSAGE" value="最终版2019.3.15 15:00" />
+    <MESSAGE value="修改2019.4.1 15:00" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改2019.4.1 15:00" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -523,10 +478,8 @@
         <state relative-caret-position="360">
           <caret line="20" column="53" lean-forward="false" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
           <folding>
-            <element signature="method#Batchimport#0;class#Batchimport#0" expanded="false" />
             <element signature="docComment;method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
             <element signature="method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
-            <element signature="method#SaveActionPerformed#0;class#Batchimport#0" expanded="false" />
             <element signature="docComment;method#initUploadingfiles#0;class#Batchimport#0" expanded="false" />
           </folding>
         </state>
@@ -576,12 +529,10 @@
         <state relative-caret-position="30">
           <caret line="106" column="20" lean-forward="false" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4411#4419#0" expanded="true" />
-            <element signature="e#5030#5040#0" expanded="true" />
-            <element signature="e#5284#5292#0" expanded="true" />
-            <element signature="e#6747#6748#0" expanded="true" />
-            <element signature="e#6793#6794#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#getRows#0;class#BusinessLogic#0" expanded="false" />
+            <element signature="e#6747#6748#0" expanded="false" />
+            <element signature="e#6793#6794#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -591,10 +542,8 @@
         <state relative-caret-position="480">
           <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="50" />
           <folding>
-            <element signature="method#Batchimport#0;class#Batchimport#0" expanded="false" />
             <element signature="docComment;method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
             <element signature="method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
-            <element signature="method#SaveActionPerformed#0;class#Batchimport#0" expanded="false" />
             <element signature="docComment;method#initUploadingfiles#0;class#Batchimport#0" expanded="false" />
           </folding>
         </state>
@@ -615,12 +564,10 @@
         <state relative-caret-position="330">
           <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4411#4419#0" expanded="true" />
-            <element signature="e#5030#5040#0" expanded="true" />
-            <element signature="e#5284#5292#0" expanded="true" />
-            <element signature="e#6747#6748#0" expanded="true" />
-            <element signature="e#6793#6794#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#getRows#0;class#BusinessLogic#0" expanded="false" />
+            <element signature="e#6747#6748#0" expanded="false" />
+            <element signature="e#6793#6794#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -674,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jiaqibiao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="225" column="13" lean-forward="false" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -723,59 +663,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yk/view/Mail.java">
+    <entry file="file://$PROJECT_DIR$/src/com/yk/JavaBean/execlBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="372">
+          <caret line="100" column="34" lean-forward="false" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yk/view/Batchimport.java">
+    <entry file="file://$PROJECT_DIR$/lib/jiaqibiao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="39" column="71" lean-forward="false" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
-          <folding>
-            <element signature="method#Batchimport#0;class#Batchimport#0" expanded="false" />
-            <element signature="docComment;method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
-            <element signature="method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
-            <element signature="method#SaveActionPerformed#0;class#Batchimport#0" expanded="false" />
-            <element signature="docComment;method#initUploadingfiles#0;class#Batchimport#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="477" column="14" lean-forward="true" selection-start-line="477" selection-start-column="14" selection-end-line="477" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yk/business/BusinessLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6150">
+        <state relative-caret-position="-1081">
           <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4411#4419#0" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#getRows#0;class#BusinessLogic#0" expanded="false" />
-            <element signature="e#5030#5040#0" expanded="true" />
-            <element signature="e#5284#5292#0" expanded="true" />
-            <element signature="e#6747#6748#0" expanded="true" />
-            <element signature="e#6793#6794#0" expanded="true" />
+            <element signature="e#6747#6748#0" expanded="false" />
+            <element signature="e#6793#6794#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yk/JavaBean/execlBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="100" column="34" lean-forward="false" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yk/business/excelImport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+        <state relative-caret-position="-2791">
+          <caret line="42" column="51" lean-forward="false" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yk/view/Batchimport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="44" column="57" lean-forward="false" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="57" />
+          <folding>
+            <element signature="docComment;method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
+            <element signature="method#UploadingfilesActionPerformed#0;class#Batchimport#0" expanded="false" />
+            <element signature="docComment;method#initUploadingfiles#0;class#Batchimport#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yk/view/Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
